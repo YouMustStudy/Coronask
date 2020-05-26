@@ -167,7 +167,6 @@
         <!--Mask Detail Controller-->
         <scene sceneID="iVy-Tm-fEm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uxs-AP-rx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="rWL-sF-fMl" customClass="MaskDetailController" customModule="Coronask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rEY-Nt-RpD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -245,13 +244,13 @@
                         <viewLayoutGuide key="safeArea" id="8Gz-Vj-beW"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uxs-AP-rx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1201" y="-1003"/>
         </scene>
         <!--Hospital Detail Controller-->
         <scene sceneID="7ZK-31-qZF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pkh-h7-ACh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="nt4-hz-heB" customClass="HospitalDetailController" customModule="Coronask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H5F-EI-Ity">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -329,13 +328,13 @@
                         <viewLayoutGuide key="safeArea" id="nyL-wS-CSy"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pkh-h7-ACh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1898" y="-340"/>
         </scene>
         <!--Sales Detail Controller-->
         <scene sceneID="siE-3w-ZxU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0LH-8z-cz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Wof-KP-tWS" customClass="SalesDetailController" customModule="Coronask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZ5-ho-7Rd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -413,6 +412,7 @@
                         <viewLayoutGuide key="safeArea" id="2sy-tB-pgG"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0LH-8z-cz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1897" y="325"/>
         </scene>
@@ -451,6 +451,14 @@
                                     <segue destination="Uem-LK-kLA" kind="show" id="Hcg-Jy-zWY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFn-Yv-OW5">
+                                <rect key="frame" x="301" y="617" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="개발정보"/>
+                                <connections>
+                                    <segue destination="VGu-pH-iRl" kind="show" id="wHk-eW-Ff5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0Yk-lQ-uD8"/>
@@ -478,6 +486,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6m-Gv-QjN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="286" y="326"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oKH-qK-uF2">
+            <objects>
+                <viewController id="VGu-pH-iRl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RFM-EQ-CvU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="한국산업기술대 게임공학부" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igq-oR-mdi">
+                                <rect key="frame" x="97" y="537" width="181" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="김근우" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVE-XC-w6D">
+                                <rect key="frame" x="164" y="566" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="사용 API" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0x-ih-FXf">
+                                <rect key="frame" x="7" y="250" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="판매처별 공적 마스크 판매정보 제공 서비스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCD-Pt-3pI">
+                                <rect key="frame" x="7" y="267" width="287" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="코로나바이러스 감염증 선별진료소 운영 의료기관 현황" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMr-Pd-R78">
+                                <rect key="frame" x="7" y="286" width="361" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="지역화폐 가맹점 현황" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXm-z7-RNN">
+                                <rect key="frame" x="6" y="304" width="142" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coronask" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8h-Hi-COc">
+                                <rect key="frame" x="100" y="166" width="172" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="FXQ-TD-E8z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTx-Z5-Pfw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277.60000000000002" y="1014.2428785607198"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5oN-xE-zJT">
