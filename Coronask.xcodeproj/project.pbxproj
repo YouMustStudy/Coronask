@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A12F247C247D0E3F0067157F /* MaskDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F247B247D0E3F0067157F /* MaskDetailController.swift */; };
+		A12F2481247D34D30067157F /* SalesDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F247D247D34D30067157F /* SalesDetailController.swift */; };
+		A12F2482247D34D30067157F /* SalesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F247E247D34D30067157F /* SalesController.swift */; };
+		A12F2483247D34D30067157F /* HospitalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F247F247D34D30067157F /* HospitalController.swift */; };
+		A12F2484247D34D30067157F /* HospitalDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F2480247D34D30067157F /* HospitalDetailController.swift */; };
+		A12F2486247D35890067157F /* CityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F2485247D35890067157F /* CityData.swift */; };
 		A1EB0293247AA6DB000794AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EB0292247AA6DB000794AB /* AppDelegate.swift */; };
 		A1EB0295247AA6DB000794AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EB0294247AA6DB000794AB /* ViewController.swift */; };
 		A1EB0298247AA6DB000794AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EB0296247AA6DB000794AB /* Main.storyboard */; };
 		A1EB029A247AA6DF000794AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EB0299247AA6DF000794AB /* Assets.xcassets */; };
 		A1EB029D247AA6DF000794AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EB029B247AA6DF000794AB /* LaunchScreen.storyboard */; };
+		A1EB02A5247AADA0000794AB /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EB02A4247AADA0000794AB /* SearchController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A12F247B247D0E3F0067157F /* MaskDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskDetailController.swift; sourceTree = "<group>"; };
+		A12F247D247D34D30067157F /* SalesDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesDetailController.swift; sourceTree = "<group>"; };
+		A12F247E247D34D30067157F /* SalesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesController.swift; sourceTree = "<group>"; };
+		A12F247F247D34D30067157F /* HospitalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalController.swift; sourceTree = "<group>"; };
+		A12F2480247D34D30067157F /* HospitalDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalDetailController.swift; sourceTree = "<group>"; };
+		A12F2485247D35890067157F /* CityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityData.swift; sourceTree = "<group>"; };
 		A1EB028F247AA6DB000794AB /* Coronask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coronask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EB0292247AA6DB000794AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1EB0294247AA6DB000794AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,7 @@
 		A1EB0299247AA6DF000794AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1EB029C247AA6DF000794AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1EB029E247AA6DF000794AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1EB02A4247AADA0000794AB /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +73,14 @@
 				A1EB0296247AA6DB000794AB /* Main.storyboard */,
 				A1EB0299247AA6DF000794AB /* Assets.xcassets */,
 				A1EB029B247AA6DF000794AB /* LaunchScreen.storyboard */,
+				A12F247F247D34D30067157F /* HospitalController.swift */,
+				A12F2480247D34D30067157F /* HospitalDetailController.swift */,
+				A12F247E247D34D30067157F /* SalesController.swift */,
+				A12F247D247D34D30067157F /* SalesDetailController.swift */,
 				A1EB029E247AA6DF000794AB /* Info.plist */,
+				A1EB02A4247AADA0000794AB /* SearchController.swift */,
+				A12F247B247D0E3F0067157F /* MaskDetailController.swift */,
+				A12F2485247D35890067157F /* CityData.swift */,
 			);
 			path = Coronask;
 			sourceTree = "<group>";
@@ -136,7 +157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1EB0295247AA6DB000794AB /* ViewController.swift in Sources */,
+				A1EB02A5247AADA0000794AB /* SearchController.swift in Sources */,
 				A1EB0293247AA6DB000794AB /* AppDelegate.swift in Sources */,
+				A12F2486247D35890067157F /* CityData.swift in Sources */,
+				A12F2481247D34D30067157F /* SalesDetailController.swift in Sources */,
+				A12F2484247D34D30067157F /* HospitalDetailController.swift in Sources */,
+				A12F2483247D34D30067157F /* HospitalController.swift in Sources */,
+				A12F2482247D34D30067157F /* SalesController.swift in Sources */,
+				A12F247C247D0E3F0067157F /* MaskDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
