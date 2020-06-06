@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
+class HospitalController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var cityTextView: UITextField!
     @IBOutlet weak var resultTableView: UITableView!
@@ -16,6 +16,8 @@ class SearchController: UIViewController, UIPickerViewDelegate, UIPickerViewData
     var isSearch: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        createPickerView(tagNo: 0)
+        dismissPickerView()
         // Do any additional setup after loading the view.
         isSearch = true
     }
@@ -43,13 +45,13 @@ class SearchController: UIViewController, UIPickerViewDelegate, UIPickerViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: nil)
-        cell.textLabel?.text = "더미약국"
-        cell.detailTextLabel?.text = "재고현황"
+        cell.textLabel?.text = "양평군 진료소"
+        cell.detailTextLabel?.text = "진료 : ~~"
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "SegueMaskDetail", sender: nil)
+        performSegue(withIdentifier: "SegueHospitalDetail", sender: nil)
     }
     
     //PickerView
