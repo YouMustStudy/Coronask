@@ -10,7 +10,6 @@ import Foundation
 
 let Citys = [
     "가평군",
-    "경기도",
     "고양시",
     "과천시",
     "광명시",
