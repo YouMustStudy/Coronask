@@ -14,12 +14,20 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
     
     @IBOutlet weak var cityTextView: UITextField!
     @IBOutlet weak var resultTableView: UITableView!
+    @IBOutlet weak var searchFooter: SearchFooter!
+    @IBOutlet weak var searchView: UIView!
     var isSearch: Bool = false
     var isFirst: Bool = false
     var decoder = JSONDecoder()
     var store_result: STORE_RESULT = STORE_RESULT(address: "", count: 0, stores: [])
     let main_url: String = "https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/storesByAddr/json?address="
     var selected_row: Int = 0
+    
+    //SearchController
+    var filteredData = [STORE_INFO]()
+    let searchController = UISearchController(searchResultsController: nil)
+    let filterScope = ["모두", "약국", "우체국", "농협"]
+    var selected_scope:Int = 0
     
     @IBAction func ClickSearch()
     {
@@ -56,6 +64,18 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
         // Do any additional setup after loading the view.
         isSearch = false
         cityTextView.text = "경기도 안양시 동안구 호계동"
+        
+        //Search Controller
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
+        searchController.searchBar.scopeButtonTitles = filterScope
+        searchController.searchBar.delegate = self
+
+        resultTableView.tableFooterView = searchFooter
     }
     
     //TableView
@@ -76,14 +96,26 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
         return retval
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return store_result.count
+        if isFiltering() {
+            searchFooter.setIsFilteringToShow(filteredItemCount: filteredData.count, of: store_result.count)
+            return filteredData.count
+        } else {
+            searchFooter.setNotFiltering()
+            return store_result.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
-        cell.textLabel?.text = store_result.stores[indexPath.row].name
+        let selected_store:STORE_INFO
+        if isFiltering() {
+            selected_store = filteredData[indexPath.row]
+        } else {
+            selected_store = store_result.stores[indexPath.row]
+        }
+        cell.textLabel?.text = selected_store.name
         cell.detailTextLabel?.text = "재고현황 : "
-        cell.detailTextLabel?.text? += ((store_result.stores[indexPath.row].remain_stat) != nil) ? store_result.stores[indexPath.row].remain_stat! : "정보없음"
+        cell.detailTextLabel?.text? += ((selected_store.remain_stat) != nil) ? selected_store.remain_stat! : "정보없음"
         return cell
     }
     
@@ -95,8 +127,52 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueMaskDetail" {
             if let maskdetailcontroller = segue.destination as? MaskDetailController {
-                maskdetailcontroller.store_info = store_result.stores[selected_row]
+                let selected_store:STORE_INFO
+                if isFiltering() {
+                    selected_store = filteredData[selected_row]
+                } else {
+                    selected_store = store_result.stores[selected_row]
+                }
+                maskdetailcontroller.store_info = selected_store
             }
         }
     }
+    
+    //Search Controller
+    func filterContentForSearchText(_ searchText: String, scope: Int = 0) {
+        filteredData = store_result.stores.filter({( info : STORE_INFO) -> Bool in
+            let doesCategoryMatch = (scope == 0) || (info.type == "0\(scope)")
+            if searchBarIsEmpty() {
+                return doesCategoryMatch
+            } else {
+                return doesCategoryMatch && info.name.lowercased().contains(searchText.lowercased())
+            }
+        })
+        resultTableView.reloadData()
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func isFiltering() -> Bool {
+        let searchBarScopeIsFiltering = searchController.searchBar.selectedScopeButtonIndex != 0
+        return searchController.isActive && (!searchBarIsEmpty() || searchBarScopeIsFiltering)
+    }
+}
+
+extension SearchController: UISearchBarDelegate {
+    // MARK: - UISearchBar Delegate
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        selected_scope = selectedScope
+        filterContentForSearchText(searchBar.text!, scope: selected_scope)
+    }
+}
+
+extension SearchController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!, scope: selected_scope)
+    }
+    
 }

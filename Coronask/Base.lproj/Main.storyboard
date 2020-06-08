@@ -70,7 +70,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9ck-05-b73">
-                                <rect key="frame" x="0.0" y="231" width="375" height="436"/>
+                                <rect key="frame" x="0.0" y="282" width="375" height="336"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RKi-tb-6gp">
@@ -112,15 +112,25 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="MIC"/>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZi-dq-xAO" customClass="SearchFooter" customModule="Coronask" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="616" width="375" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LwH-ou-kXR">
+                                <rect key="frame" x="0.0" y="225" width="375" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9ck-05-b73" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" id="4F3-35-f50"/>
                             <constraint firstItem="5Y9-ZJ-j9g" firstAttribute="centerY" secondItem="Eak-Mx-UQJ" secondAttribute="centerY" constant="-292" id="4aM-tF-bSG"/>
-                            <constraint firstItem="9ck-05-b73" firstAttribute="top" secondItem="Pzu-bi-3as" secondAttribute="bottom" constant="8" symbolic="YES" id="7TJ-hX-2Ru"/>
+                            <constraint firstItem="9ck-05-b73" firstAttribute="top" secondItem="Pzu-bi-3as" secondAttribute="bottom" constant="59" id="7TJ-hX-2Ru"/>
                             <constraint firstItem="uVg-rN-KNb" firstAttribute="centerY" secondItem="Eak-Mx-UQJ" secondAttribute="centerY" constant="-183.5" id="DA5-5X-hxu"/>
                             <constraint firstItem="Pzu-bi-3as" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" id="EtL-Ib-MDo"/>
-                            <constraint firstItem="9ck-05-b73" firstAttribute="centerY" secondItem="Eak-Mx-UQJ" secondAttribute="centerY" constant="115.5" id="FXs-ND-A3g"/>
+                            <constraint firstItem="9ck-05-b73" firstAttribute="centerY" secondItem="Eak-Mx-UQJ" secondAttribute="centerY" constant="116.5" id="FXs-ND-A3g"/>
                             <constraint firstItem="x04-sd-LxI" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" constant="-126" id="Fjg-Dc-mXu"/>
                             <constraint firstItem="uVg-rN-KNb" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" constant="13" id="Oj5-5H-bpb"/>
                             <constraint firstItem="5Y9-ZJ-j9g" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" id="Pbw-GJ-XRu"/>
@@ -136,11 +146,13 @@
                     <connections>
                         <outlet property="cityTextView" destination="uVg-rN-KNb" id="YP8-rZ-FVp"/>
                         <outlet property="resultTableView" destination="9ck-05-b73" id="O06-8U-LJu"/>
+                        <outlet property="searchFooter" destination="yZi-dq-xAO" id="Yox-sp-6oV"/>
+                        <outlet property="searchView" destination="LwH-ou-kXR" id="avx-gI-fv8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2j-P4-i4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286" y="-1003"/>
+            <point key="canvasLocation" x="285.60000000000002" y="-1003.4482758620691"/>
         </scene>
         <!--Mask Detail Controller-->
         <scene sceneID="iVy-Tm-fEm">
@@ -706,7 +718,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AYC-UT-ERR">
-                                <rect key="frame" x="0.0" y="231" width="375" height="436"/>
+                                <rect key="frame" x="0.0" y="231" width="375" height="387"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HospitalCell" textLabel="xvz-vP-2xr" detailTextLabel="9PN-cu-Rhl" style="IBUITableViewCellStyleValue1" id="0mg-pM-yGA">
@@ -751,7 +763,7 @@
                             <constraint firstItem="8by-iH-GZF" firstAttribute="centerY" secondItem="V7f-de-7nt" secondAttribute="centerY" constant="-292" id="Kw1-jd-RbT"/>
                             <constraint firstItem="wb6-je-Lz4" firstAttribute="centerX" secondItem="V7f-de-7nt" secondAttribute="centerX" constant="-121" id="MrQ-pY-OBx"/>
                             <constraint firstItem="wb6-je-Lz4" firstAttribute="centerY" secondItem="V7f-de-7nt" secondAttribute="centerY" constant="-213" id="NhK-Cc-AGT"/>
-                            <constraint firstItem="AYC-UT-ERR" firstAttribute="centerY" secondItem="V7f-de-7nt" secondAttribute="centerY" constant="115.5" id="YGE-lw-CjI"/>
+                            <constraint firstItem="AYC-UT-ERR" firstAttribute="centerY" secondItem="V7f-de-7nt" secondAttribute="centerY" constant="91" id="YGE-lw-CjI"/>
                             <constraint firstItem="Mt0-ia-0mb" firstAttribute="centerX" secondItem="V7f-de-7nt" secondAttribute="centerX" constant="18" id="agB-R5-NBW"/>
                             <constraint firstItem="AYC-UT-ERR" firstAttribute="centerX" secondItem="V7f-de-7nt" secondAttribute="centerX" id="c3G-pd-x7a"/>
                             <constraint firstItem="AYC-UT-ERR" firstAttribute="top" secondItem="8K0-eQ-d8C" secondAttribute="bottom" constant="8" symbolic="YES" id="cdS-9V-uo4"/>
@@ -770,7 +782,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fgy-I9-A7m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1201" y="-340"/>
+            <point key="canvasLocation" x="1200.8" y="-340.47976011994007"/>
         </scene>
         <!--주소로 검색-->
         <scene sceneID="AmF-73-UWj">

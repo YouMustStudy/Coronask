@@ -12,6 +12,7 @@ class HospitalController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     @IBOutlet weak var cityTextView: UITextField!
     @IBOutlet weak var resultTableView: UITableView!
+    
     var isSearch: Bool = false
     var isFirst: Bool = false
     let main_url: String = "https://openapi.gg.go.kr/EmgMedInfo?key=8061088846964e22afc0bd5e0770d7a3&sigun_nm="

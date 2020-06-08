@@ -22,6 +22,7 @@
 		A1ED060C248B88FA002EF4D6 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED060B248B88FA002EF4D6 /* JSON.swift */; };
 		A1ED0610248B8F9C002EF4D6 /* STORE_CLASS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED060F248B8F9C002EF4D6 /* STORE_CLASS.swift */; };
 		A1ED062F248CD561002EF4D6 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED062E248CD561002EF4D6 /* CardViewController.swift */; };
+		A1ED0631248ED92E002EF4D6 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED0630248ED92E002EF4D6 /* SearchFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		A1ED060B248B88FA002EF4D6 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		A1ED060F248B8F9C002EF4D6 /* STORE_CLASS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STORE_CLASS.swift; sourceTree = "<group>"; };
 		A1ED062E248CD561002EF4D6 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		A1ED0630248ED92E002EF4D6 /* SearchFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				A1ED060E248B8A14002EF4D6 /* Data */,
 				A1ED060D248B89F5002EF4D6 /* Controller */,
 				A1EB0292247AA6DB000794AB /* AppDelegate.swift */,
+				A1ED0630248ED92E002EF4D6 /* SearchFooter.swift */,
 				A1EB0294247AA6DB000794AB /* ViewController.swift */,
 				A1EB0296247AA6DB000794AB /* Main.storyboard */,
 				A1EB0299247AA6DF000794AB /* Assets.xcassets */,
@@ -184,6 +187,7 @@
 				A1EB0295247AA6DB000794AB /* ViewController.swift in Sources */,
 				A1ED0610248B8F9C002EF4D6 /* STORE_CLASS.swift in Sources */,
 				A1ED060C248B88FA002EF4D6 /* JSON.swift in Sources */,
+				A1ED0631248ED92E002EF4D6 /* SearchFooter.swift in Sources */,
 				A1EB02A5247AADA0000794AB /* SearchController.swift in Sources */,
 				A1EB0293247AA6DB000794AB /* AppDelegate.swift in Sources */,
 				A12F2486247D35890067157F /* CityData.swift in Sources */,
