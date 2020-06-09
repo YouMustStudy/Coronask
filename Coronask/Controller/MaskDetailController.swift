@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import MapKit
 
-class MaskDetailController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MaskDetailController: UIViewController, UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate {
+    @IBOutlet weak var mapView: MKMapView!
     var store_info: STORE_INFO = STORE_INFO(addr: "", code: "", created_at: "", lat: 0.0, lng: 0.0, name: "", remain_stat: "", stock_at: "", type: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        mapView.delegate = self
+        let anno = Anno(title: store_info.name, _subtitle: store_info.addr, coord: CLLocationCoordinate2D(latitude: CLLocationDegrees(store_info.lat), longitude: CLLocationDegrees(store_info.lng)))
+        mapView.addAnnotation(anno)
+        centerMapOnLocation(location: CLLocation(latitude: CLLocationDegrees(store_info.lat), longitude: CLLocationDegrees(store_info.lng)))
     }
     
     //TableView
@@ -54,5 +61,26 @@ class MaskDetailController: UIViewController, UITableViewDataSource, UITableView
             break
         }
         return cell
+    }
+    
+    func centerMapOnLocation(location: CLLocation) {
+        let regionRadius: CLLocationDistance = 500
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let anno = annotation as? Anno else { return nil }
+        let identifier = "marker"
+        var view: MKMarkerAnnotationView
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView {
+            dequeuedView.annotation = anno
+            view = dequeuedView
+        } else {
+            view = MKMarkerAnnotationView(annotation: anno, reuseIdentifier: identifier)
+            view.canShowCallout = true
+            view.calloutOffset = CGPoint(x: -5, y: 5)
+        }
+        return view
     }
 }

@@ -70,7 +70,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9ck-05-b73">
-                                <rect key="frame" x="0.0" y="282" width="375" height="336"/>
+                                <rect key="frame" x="0.0" y="231" width="375" height="387"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RKi-tb-6gp">
@@ -117,20 +117,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LwH-ou-kXR">
-                                <rect key="frame" x="0.0" y="225" width="375" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9ck-05-b73" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" id="4F3-35-f50"/>
                             <constraint firstItem="5Y9-ZJ-j9g" firstAttribute="centerY" secondItem="Eak-Mx-UQJ" secondAttribute="centerY" constant="-292" id="4aM-tF-bSG"/>
-                            <constraint firstItem="9ck-05-b73" firstAttribute="top" secondItem="Pzu-bi-3as" secondAttribute="bottom" constant="59" id="7TJ-hX-2Ru"/>
+                            <constraint firstItem="9ck-05-b73" firstAttribute="top" secondItem="Pzu-bi-3as" secondAttribute="bottom" constant="8" id="7TJ-hX-2Ru"/>
                             <constraint firstItem="uVg-rN-KNb" firstAttribute="centerY" secondItem="Eak-Mx-UQJ" secondAttribute="centerY" constant="-183.5" id="DA5-5X-hxu"/>
                             <constraint firstItem="Pzu-bi-3as" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" id="EtL-Ib-MDo"/>
-                            <constraint firstItem="9ck-05-b73" firstAttribute="centerY" secondItem="Eak-Mx-UQJ" secondAttribute="centerY" constant="116.5" id="FXs-ND-A3g"/>
+                            <constraint firstItem="9ck-05-b73" firstAttribute="centerY" secondItem="Eak-Mx-UQJ" secondAttribute="centerY" constant="91" id="FXs-ND-A3g"/>
                             <constraint firstItem="x04-sd-LxI" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" constant="-126" id="Fjg-Dc-mXu"/>
                             <constraint firstItem="uVg-rN-KNb" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" constant="13" id="Oj5-5H-bpb"/>
                             <constraint firstItem="5Y9-ZJ-j9g" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" id="Pbw-GJ-XRu"/>
@@ -147,7 +142,6 @@
                         <outlet property="cityTextView" destination="uVg-rN-KNb" id="YP8-rZ-FVp"/>
                         <outlet property="resultTableView" destination="9ck-05-b73" id="O06-8U-LJu"/>
                         <outlet property="searchFooter" destination="yZi-dq-xAO" id="Yox-sp-6oV"/>
-                        <outlet property="searchView" destination="LwH-ou-kXR" id="avx-gI-fv8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2j-P4-i4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -245,6 +239,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Gz-Vj-beW"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="DXI-LO-mhf" id="QzP-hx-uTy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uxs-AP-rx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -341,6 +338,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nyL-wS-CSy"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="MWs-El-452" id="Bdc-dA-ulH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pkh-h7-ACh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -437,6 +437,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2sy-tB-pgG"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="9Ra-Cu-Vdv" id="FnP-rJ-Ub1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0LH-8z-cz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -721,7 +724,7 @@
                                 <rect key="frame" x="0.0" y="231" width="375" height="387"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HospitalCell" textLabel="xvz-vP-2xr" detailTextLabel="9PN-cu-Rhl" style="IBUITableViewCellStyleValue1" id="0mg-pM-yGA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HospitalCell" textLabel="xvz-vP-2xr" detailTextLabel="9PN-cu-Rhl" style="IBUITableViewCellStyleSubtitle" id="0mg-pM-yGA">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0mg-pM-yGA" id="qLb-wU-r8a">
@@ -729,16 +732,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xvz-vP-2xr">
-                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9PN-cu-Rhl">
-                                                    <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9PN-cu-Rhl">
+                                                    <rect key="frame" x="15" y="25.5" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -825,7 +828,7 @@
                                 <rect key="frame" x="0.0" y="231" width="375" height="436"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SalesCell" textLabel="Shp-4R-lSk" detailTextLabel="iSk-sE-lJt" style="IBUITableViewCellStyleValue1" id="2A7-im-fgE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SalesCell" textLabel="Shp-4R-lSk" detailTextLabel="iSk-sE-lJt" style="IBUITableViewCellStyleSubtitle" id="2A7-im-fgE">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2A7-im-fgE" id="xJ1-QM-E0j">
@@ -833,16 +836,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Shp-4R-lSk">
-                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iSk-sE-lJt">
-                                                    <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iSk-sE-lJt">
+                                                    <rect key="frame" x="15" y="25.5" width="33" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

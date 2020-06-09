@@ -23,6 +23,7 @@
 		A1ED0610248B8F9C002EF4D6 /* STORE_CLASS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED060F248B8F9C002EF4D6 /* STORE_CLASS.swift */; };
 		A1ED062F248CD561002EF4D6 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED062E248CD561002EF4D6 /* CardViewController.swift */; };
 		A1ED0631248ED92E002EF4D6 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED0630248ED92E002EF4D6 /* SearchFooter.swift */; };
+		A1ED0633248F7E8B002EF4D6 /* Anno.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED0632248F7E8B002EF4D6 /* Anno.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		A1ED060F248B8F9C002EF4D6 /* STORE_CLASS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STORE_CLASS.swift; sourceTree = "<group>"; };
 		A1ED062E248CD561002EF4D6 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		A1ED0630248ED92E002EF4D6 /* SearchFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
+		A1ED0632248F7E8B002EF4D6 /* Anno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anno.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				A1ED060B248B88FA002EF4D6 /* JSON.swift */,
 				A12F2485247D35890067157F /* CityData.swift */,
 				A1ED060F248B8F9C002EF4D6 /* STORE_CLASS.swift */,
+				A1ED0632248F7E8B002EF4D6 /* Anno.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				A12F2486247D35890067157F /* CityData.swift in Sources */,
 				A12F2481247D34D30067157F /* SalesDetailController.swift in Sources */,
 				A12F2484247D34D30067157F /* HospitalDetailController.swift in Sources */,
+				A1ED0633248F7E8B002EF4D6 /* Anno.swift in Sources */,
 				A1ED062F248CD561002EF4D6 /* CardViewController.swift in Sources */,
 				A12F2483247D34D30067157F /* HospitalController.swift in Sources */,
 				A12F2482247D34D30067157F /* SalesController.swift in Sources */,
