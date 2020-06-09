@@ -114,6 +114,9 @@
                                 <rect key="frame" x="312" y="135" width="30" height="30"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="MIC"/>
+                                <connections>
+                                    <action selector="MICAction:" destination="FtE-Ci-iTV" eventType="touchUpInside" id="Vp2-Kq-LyU"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZi-dq-xAO" customClass="SearchFooter" customModule="Coronask" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="616" width="375" height="51"/>
@@ -142,6 +145,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Nbh-zC-a9f"/>
                     <connections>
+                        <outlet property="MIC" destination="ZO7-eB-v4S" id="zws-sW-LOU"/>
                         <outlet property="cityTextView" destination="uVg-rN-KNb" id="YP8-rZ-FVp"/>
                         <outlet property="resultTableView" destination="9ck-05-b73" id="O06-8U-LJu"/>
                         <outlet property="searchFooter" destination="yZi-dq-xAO" id="Yox-sp-6oV"/>

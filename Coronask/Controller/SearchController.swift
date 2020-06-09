@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Speech
 
 
 class SearchController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -15,6 +15,7 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
     @IBOutlet weak var cityTextView: UITextField!
     @IBOutlet weak var resultTableView: UITableView!
     @IBOutlet weak var searchFooter: SearchFooter!
+    @IBOutlet weak var MIC: UIButton!
     
     var isSearch: Bool = false
     var isFirst: Bool = false
@@ -138,6 +139,102 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
         }
     }
     
+    //Speech Recognition
+    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ko-KR"))!
+    private var speechRecognitionRequest: SFSpeechAudioBufferRecognitionRequest?
+    private var speechRecognitionTask: SFSpeechRecognitionTask?
+    private let audioEngine = AVAudioEngine()
+    private var isMIC: Bool = false
+    private var isAuthorized: Bool = false
+    
+    @IBAction func MICAction(_ sender: Any) {
+        if !isAuthorized {
+            authoriseSR()
+        }
+        if !isMIC {
+            isMIC = true
+            MIC.setTitle("STOP", for: .normal)
+            try! startSession()
+        } else {
+            stopListen()
+        }
+    }
+    
+    func stopListen() {
+        isMIC = false
+        MIC.setTitle("MIC", for: .normal)
+        if audioEngine.isRunning {
+            audioEngine.stop()
+            speechRecognitionRequest?.endAudio()
+        }
+    }
+    
+    func startSession() throws {
+        if let recognitionTask = speechRecognitionTask {
+            recognitionTask.cancel()
+            self.speechRecognitionTask = nil
+        }
+        
+        let audioSession = AVAudioSession.sharedInstance()
+        try audioSession.setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
+        speechRecognitionRequest = SFSpeechAudioBufferRecognitionRequest()
+        
+        guard let recognitionRequest = speechRecognitionRequest else
+        { fatalError("SFSpeechAudioBufferRecognitionRequest Object creation failed" )}
+        
+        let inputNode = audioEngine.inputNode
+        recognitionRequest.shouldReportPartialResults = true
+        
+        speechRecognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
+            var finished = false
+            if let result = result {
+                self.cityTextView.text = result.bestTranscription.formattedString
+                finished = result.isFinal
+            }
+            if error != nil || finished {
+                self.audioEngine.stop()
+                inputNode.removeTap(onBus: 8)
+                self.speechRecognitionRequest = nil
+                self.speechRecognitionTask = nil
+                self.stopListen()
+            }
+        }
+        
+        let recordingFormat = inputNode.outputFormat(forBus: 8)
+        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) {
+            (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
+            self.speechRecognitionRequest?.append(buffer)
+        }
+        
+        audioEngine.prepare()
+        try audioEngine.start()
+    }
+    
+    func authoriseSR(){
+        SFSpeechRecognizer.requestAuthorization { authStatus in
+            OperationQueue.main.addOperation {
+                switch authStatus {
+                case .authorized:
+                    self.MIC.isEnabled = true
+                    self.isAuthorized = true
+                    break
+                case .denied:
+                    self.MIC.isEnabled = false
+                    self.MIC.setTitle("Speech recognition access denied by user", for: .disabled)
+                    break
+                case .restricted:
+                    self.MIC.isEnabled = false
+                    self.MIC.setTitle("Speech recognition restricted on device", for: .disabled)
+                    break
+                case .notDetermined:
+                    self.MIC.isEnabled = false
+                    self.MIC.setTitle("Speech recognition not authorized", for: .disabled)
+                    break
+                }
+            }
+        }
+    }
+    
     //Search Controller
     func filterContentForSearchText(_ searchText: String, scope: Int = 0) {
         filteredData = store_result.stores.filter({( info : STORE_INFO) -> Bool in
@@ -174,5 +271,6 @@ extension SearchController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!, scope: selected_scope)
     }
+    
     
 }
