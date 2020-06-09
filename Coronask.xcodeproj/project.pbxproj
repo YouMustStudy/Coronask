@@ -24,6 +24,7 @@
 		A1ED062F248CD561002EF4D6 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED062E248CD561002EF4D6 /* CardViewController.swift */; };
 		A1ED0631248ED92E002EF4D6 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED0630248ED92E002EF4D6 /* SearchFooter.swift */; };
 		A1ED0633248F7E8B002EF4D6 /* Anno.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED0632248F7E8B002EF4D6 /* Anno.swift */; };
+		A1ED0637248F8ECE002EF4D6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED0636248F8ECE002EF4D6 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A1ED062E248CD561002EF4D6 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		A1ED0630248ED92E002EF4D6 /* SearchFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 		A1ED0632248F7E8B002EF4D6 /* Anno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anno.swift; sourceTree = "<group>"; };
+		A1ED0636248F8ECE002EF4D6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				A1EB02A4247AADA0000794AB /* SearchController.swift */,
 				A12F247B247D0E3F0067157F /* MaskDetailController.swift */,
 				A1ED062E248CD561002EF4D6 /* CardViewController.swift */,
+				A1ED0636248F8ECE002EF4D6 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				A1ED062F248CD561002EF4D6 /* CardViewController.swift in Sources */,
 				A12F2483247D34D30067157F /* HospitalController.swift in Sources */,
 				A12F2482247D34D30067157F /* SalesController.swift in Sources */,
+				A1ED0637248F8ECE002EF4D6 /* MapViewController.swift in Sources */,
 				A12F247C247D0E3F0067157F /* MaskDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

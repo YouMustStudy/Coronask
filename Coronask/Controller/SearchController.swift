@@ -15,11 +15,11 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
     @IBOutlet weak var cityTextView: UITextField!
     @IBOutlet weak var resultTableView: UITableView!
     @IBOutlet weak var searchFooter: SearchFooter!
-    @IBOutlet weak var searchView: UIView!
+    
     var isSearch: Bool = false
     var isFirst: Bool = false
     var decoder = JSONDecoder()
-    var store_result: STORE_RESULT = STORE_RESULT(address: "", count: 0, stores: [])
+    var store_result: STORE_RESULT = STORE_RESULT(count: 0, stores: [])
     let main_url: String = "https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1/storesByAddr/json?address="
     var selected_row: Int = 0
     

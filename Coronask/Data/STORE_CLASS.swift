@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import MapKit
 
 struct STORE_RESULT : Codable {
-    let address: String
+    //let address: String
     let count: Int
     let stores: [STORE_INFO]
 }

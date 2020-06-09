@@ -13,7 +13,7 @@
         <!--주변보기-->
         <scene sceneID="257-T3-7lc">
             <objects>
-                <viewController id="gGu-fs-4Nb" sceneMemberID="viewController">
+                <viewController id="gGu-fs-4Nb" customClass="MapViewController" customModule="Coronask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WEv-rf-MEg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,6 +43,9 @@
                         <viewLayoutGuide key="safeArea" id="eXJ-Y0-UnO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="주변보기" id="ZdO-t2-iqd"/>
+                    <connections>
+                        <outlet property="mapView" destination="MXr-AJ-zKA" id="4i0-AA-mZr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHz-t5-T2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
