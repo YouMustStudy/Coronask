@@ -16,6 +16,7 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
     @IBOutlet weak var resultTableView: UITableView!
     @IBOutlet weak var searchFooter: SearchFooter!
     @IBOutlet weak var MIC: UIButton!
+    @IBOutlet weak var ChartBtn: UIBarButtonItem!
     
     var isSearch: Bool = false
     var isFirst: Bool = false
@@ -54,8 +55,14 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
             print("ERROR : string to data")
             return }
         
-        if store_result.count > 0 { isSearch = true }
-        else { isSearch = false }
+        if store_result.count > 0 {
+            isSearch = true
+            ChartBtn.isEnabled = true
+        }
+        else {
+            isSearch = false
+            ChartBtn.isEnabled = false
+        }
         isFirst = true
         resultTableView.reloadData()
     }
@@ -64,6 +71,7 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         isSearch = false
+        ChartBtn.isEnabled = false
         cityTextView.text = "경기도 안양시 동안구 호계동"
         
         //Search Controller
@@ -115,8 +123,7 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
             selected_store = store_result.stores[indexPath.row]
         }
         cell.textLabel?.text = selected_store.name
-        cell.detailTextLabel?.text = "재고현황 : "
-        cell.detailTextLabel?.text? += ((selected_store.remain_stat) != nil) ? selected_store.remain_stat! : "정보없음"
+        cell.detailTextLabel?.text = ((selected_store.remain_stat) != nil) ? REMAIN_STAT_MAP[selected_store.remain_stat!] : "정보없음"
         return cell
     }
     
@@ -135,6 +142,14 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
                     selected_store = store_result.stores[selected_row]
                 }
                 maskdetailcontroller.store_info = selected_store
+            }
+        } else if segue.identifier == "SegueShowChart" {
+            if let chartcontroller = segue.destination as? ChartViewController {
+                var counts = [Int]()
+                for i in 0..<4 {
+                    counts.append(store_result.stores.filter {$0.remain_stat == REMAIN_STAT[i]}.count)
+                }
+                chartcontroller.counts = counts
             }
         }
     }

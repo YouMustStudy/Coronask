@@ -9,6 +9,9 @@
 import Foundation
 import MapKit
 
+let REMAIN_STAT = ["plenty", "some", "few", "empty", "break"]
+let REMAIN_STAT_MAP = [REMAIN_STAT[0]: "충분", REMAIN_STAT[1]: "보통", REMAIN_STAT[2]: "부족", REMAIN_STAT[3]: "품절", REMAIN_STAT[4]: "판매중지"]
+
 struct STORE_RESULT : Codable {
     //let address: String
     let count: Int

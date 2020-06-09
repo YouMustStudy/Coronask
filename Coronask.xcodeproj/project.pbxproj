@@ -19,6 +19,8 @@
 		A1EB029A247AA6DF000794AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1EB0299247AA6DF000794AB /* Assets.xcassets */; };
 		A1EB029D247AA6DF000794AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EB029B247AA6DF000794AB /* LaunchScreen.storyboard */; };
 		A1EB02A5247AADA0000794AB /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EB02A4247AADA0000794AB /* SearchController.swift */; };
+		A1ECE274248FD198000B5A3A /* MaskChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ECE273248FD198000B5A3A /* MaskChart.swift */; };
+		A1ECE276248FD985000B5A3A /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ECE275248FD985000B5A3A /* ChartViewController.swift */; };
 		A1ED060C248B88FA002EF4D6 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED060B248B88FA002EF4D6 /* JSON.swift */; };
 		A1ED0610248B8F9C002EF4D6 /* STORE_CLASS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED060F248B8F9C002EF4D6 /* STORE_CLASS.swift */; };
 		A1ED062F248CD561002EF4D6 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED062E248CD561002EF4D6 /* CardViewController.swift */; };
@@ -42,6 +44,8 @@
 		A1EB029C247AA6DF000794AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1EB029E247AA6DF000794AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1EB02A4247AADA0000794AB /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		A1ECE273248FD198000B5A3A /* MaskChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskChart.swift; sourceTree = "<group>"; };
+		A1ECE275248FD985000B5A3A /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		A1ED060B248B88FA002EF4D6 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		A1ED060F248B8F9C002EF4D6 /* STORE_CLASS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STORE_CLASS.swift; sourceTree = "<group>"; };
 		A1ED062E248CD561002EF4D6 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		A1EB0291247AA6DB000794AB /* Coronask */ = {
 			isa = PBXGroup;
 			children = (
+				A1ED0638248FC306002EF4D6 /* Chart */,
 				A1ED060E248B8A14002EF4D6 /* Data */,
 				A1ED060D248B89F5002EF4D6 /* Controller */,
 				A1EB0292247AA6DB000794AB /* AppDelegate.swift */,
@@ -104,6 +109,7 @@
 				A12F247B247D0E3F0067157F /* MaskDetailController.swift */,
 				A1ED062E248CD561002EF4D6 /* CardViewController.swift */,
 				A1ED0636248F8ECE002EF4D6 /* MapViewController.swift */,
+				A1ECE275248FD985000B5A3A /* ChartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -117,6 +123,14 @@
 				A1ED0632248F7E8B002EF4D6 /* Anno.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		A1ED0638248FC306002EF4D6 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				A1ECE273248FD198000B5A3A /* MaskChart.swift */,
+			);
+			path = Chart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,11 +206,13 @@
 			files = (
 				A1EB0295247AA6DB000794AB /* ViewController.swift in Sources */,
 				A1ED0610248B8F9C002EF4D6 /* STORE_CLASS.swift in Sources */,
+				A1ECE274248FD198000B5A3A /* MaskChart.swift in Sources */,
 				A1ED060C248B88FA002EF4D6 /* JSON.swift in Sources */,
 				A1ED0631248ED92E002EF4D6 /* SearchFooter.swift in Sources */,
 				A1EB02A5247AADA0000794AB /* SearchController.swift in Sources */,
 				A1EB0293247AA6DB000794AB /* AppDelegate.swift in Sources */,
 				A12F2486247D35890067157F /* CityData.swift in Sources */,
+				A1ECE276248FD985000B5A3A /* ChartViewController.swift in Sources */,
 				A12F2481247D34D30067157F /* SalesDetailController.swift in Sources */,
 				A12F2484247D34D30067157F /* HospitalDetailController.swift in Sources */,
 				A1ED0633248F7E8B002EF4D6 /* Anno.swift in Sources */,
@@ -281,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -336,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
