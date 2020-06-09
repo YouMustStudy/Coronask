@@ -45,7 +45,7 @@ class MaskDetailController: UIViewController, UITableViewDataSource, UITableView
             break
         case 2:
             cell.textLabel?.text = "재고상황"
-            cell.detailTextLabel?.text = (store_info.remain_stat == nil) ? "정보없음" : store_info.remain_stat
+            cell.detailTextLabel?.text = ((store_info.remain_stat) != nil) ? REMAIN_STAT_MAP[store_info.remain_stat!] : "정보없음"
             break
             
         case 3:

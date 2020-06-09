@@ -28,7 +28,7 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
     //SearchController
     var filteredData = [STORE_INFO]()
     let searchController = UISearchController(searchResultsController: nil)
-    let filterScope = ["모두", "약국", "우체국", "농협"]
+    let filterScope = ["모두"] + REMAIN_STAT_KOR
     var selected_scope:Int = 0
     
     @IBAction func ClickSearch()
@@ -253,7 +253,7 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
     //Search Controller
     func filterContentForSearchText(_ searchText: String, scope: Int = 0) {
         filteredData = store_result.stores.filter({( info : STORE_INFO) -> Bool in
-            let doesCategoryMatch = (scope == 0) || (info.type == "0\(scope)")
+            let doesCategoryMatch = (scope == 0) || (info.remain_stat == REMAIN_STAT[scope-1])
             if searchBarIsEmpty() {
                 return doesCategoryMatch
             } else {
