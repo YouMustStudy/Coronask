@@ -11,11 +11,13 @@ import SwiftUI
 
 class ChartViewController: UIViewController {
 var counts = [Int]()
+    @IBOutlet weak var charts: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        charts.alpha = 0.0
+        UIView.animate(withDuration: 2.0, delay: 0.0, options: .curveEaseIn, animations: { self.charts.alpha = 1.0 }, completion: nil)
         // Do any additional setup after loading the view.
     }
     

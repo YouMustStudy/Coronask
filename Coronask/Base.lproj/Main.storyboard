@@ -183,6 +183,9 @@
                         <viewLayoutGuide key="safeArea" id="ykh-bR-oQc"/>
                     </view>
                     <navigationItem key="navigationItem" id="1nz-0b-e8h"/>
+                    <connections>
+                        <outlet property="charts" destination="ZdA-K4-mIE" id="gdC-C7-Jib"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tJ-Nh-bED" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
