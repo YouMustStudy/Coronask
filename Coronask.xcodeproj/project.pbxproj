@@ -13,6 +13,11 @@
 		A12F2483247D34D30067157F /* HospitalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F247F247D34D30067157F /* HospitalController.swift */; };
 		A12F2484247D34D30067157F /* HospitalDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F2480247D34D30067157F /* HospitalDetailController.swift */; };
 		A12F2486247D35890067157F /* CityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12F2485247D35890067157F /* CityData.swift */; };
+		A16C26EF249F384200E92E7E /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A16C26ED249F384200E92E7E /* AppIcon.png */; };
+		A16C26F0249F384200E92E7E /* StoreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = A16C26EE249F384200E92E7E /* StoreIcon.png */; };
+		A16C26F3249F3C3700E92E7E /* StardustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16C26F1249F3C3700E92E7E /* StardustView.swift */; };
+		A16C26F4249F3C3700E92E7E /* ExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16C26F2249F3C3700E92E7E /* ExplodeView.swift */; };
+		A16C26F7249F3DFF00E92E7E /* particle.png in Resources */ = {isa = PBXBuildFile; fileRef = A16C26F6249F3DFF00E92E7E /* particle.png */; };
 		A1EB0293247AA6DB000794AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EB0292247AA6DB000794AB /* AppDelegate.swift */; };
 		A1EB0295247AA6DB000794AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EB0294247AA6DB000794AB /* ViewController.swift */; };
 		A1EB0298247AA6DB000794AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1EB0296247AA6DB000794AB /* Main.storyboard */; };
@@ -36,6 +41,11 @@
 		A12F247F247D34D30067157F /* HospitalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalController.swift; sourceTree = "<group>"; };
 		A12F2480247D34D30067157F /* HospitalDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalDetailController.swift; sourceTree = "<group>"; };
 		A12F2485247D35890067157F /* CityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityData.swift; sourceTree = "<group>"; };
+		A16C26ED249F384200E92E7E /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		A16C26EE249F384200E92E7E /* StoreIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreIcon.png; sourceTree = "<group>"; };
+		A16C26F1249F3C3700E92E7E /* StardustView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StardustView.swift; path = Coronask/StardustView.swift; sourceTree = SOURCE_ROOT; };
+		A16C26F2249F3C3700E92E7E /* ExplodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExplodeView.swift; path = Coronask/ExplodeView.swift; sourceTree = SOURCE_ROOT; };
+		A16C26F6249F3DFF00E92E7E /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle.png; sourceTree = "<group>"; };
 		A1EB028F247AA6DB000794AB /* Coronask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coronask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EB0292247AA6DB000794AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1EB0294247AA6DB000794AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A16C26F5249F3DFF00E92E7E /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				A16C26F6249F3DFF00E92E7E /* particle.png */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
 		A1EB0286247AA6DB000794AB = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +110,9 @@
 				A1EB0294247AA6DB000794AB /* ViewController.swift */,
 				A1EB0296247AA6DB000794AB /* Main.storyboard */,
 				A1EB0299247AA6DF000794AB /* Assets.xcassets */,
+				A16C26ED249F384200E92E7E /* AppIcon.png */,
+				A16C26F5249F3DFF00E92E7E /* Particles */,
+				A16C26EE249F384200E92E7E /* StoreIcon.png */,
 				A1EB029B247AA6DF000794AB /* LaunchScreen.storyboard */,
 				A1EB029E247AA6DF000794AB /* Info.plist */,
 			);
@@ -121,6 +142,8 @@
 				A12F2485247D35890067157F /* CityData.swift */,
 				A1ED060F248B8F9C002EF4D6 /* STORE_CLASS.swift */,
 				A1ED0632248F7E8B002EF4D6 /* Anno.swift */,
+				A16C26F2249F3C3700E92E7E /* ExplodeView.swift */,
+				A16C26F1249F3C3700E92E7E /* StardustView.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -191,9 +214,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16C26EF249F384200E92E7E /* AppIcon.png in Resources */,
 				A1EB029D247AA6DF000794AB /* LaunchScreen.storyboard in Resources */,
+				A16C26F0249F384200E92E7E /* StoreIcon.png in Resources */,
 				A1EB029A247AA6DF000794AB /* Assets.xcassets in Resources */,
 				A1EB0298247AA6DB000794AB /* Main.storyboard in Resources */,
+				A16C26F7249F3DFF00E92E7E /* particle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,8 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16C26F4249F3C3700E92E7E /* ExplodeView.swift in Sources */,
 				A1EB0295247AA6DB000794AB /* ViewController.swift in Sources */,
 				A1ED0610248B8F9C002EF4D6 /* STORE_CLASS.swift in Sources */,
+				A16C26F3249F3C3700E92E7E /* StardustView.swift in Sources */,
 				A1ECE274248FD198000B5A3A /* MaskChart.swift in Sources */,
 				A1ED060C248B88FA002EF4D6 /* JSON.swift in Sources */,
 				A1ED0631248ED92E002EF4D6 /* SearchFooter.swift in Sources */,

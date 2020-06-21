@@ -7,34 +7,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--주변보기-->
+        <!--주변검색-->
         <scene sceneID="257-T3-7lc">
             <objects>
-                <viewController id="gGu-fs-4Nb" customClass="MapViewController" customModule="Coronask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="주변검색" id="gGu-fs-4Nb" customClass="MapViewController" customModule="Coronask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WEv-rf-MEg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MXr-AJ-zKA">
-                                <rect key="frame" x="0.0" y="68" width="375" height="550"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="550" id="0VT-xg-zYj"/>
                                     <constraint firstAttribute="width" constant="375" id="SKK-aF-lST"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="TRU-LZ-Mdi"/>
-                                    <constraint firstAttribute="height" constant="550" id="y9E-Qa-Pas"/>
+                                    <constraint firstAttribute="height" constant="623" id="y9E-Qa-Pas"/>
                                 </constraints>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주변 판매처 검색" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Z6-XV-0rY">
-                                <rect key="frame" x="0.0" y="20" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.71482461689999999" green="0.79838627579999999" blue="0.90244537589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MXr-AJ-zKA" firstAttribute="centerY" secondItem="WEv-rf-MEg" secondAttribute="centerY" constant="9.5" id="Q8w-q9-HLN"/>
+                            <constraint firstItem="MXr-AJ-zKA" firstAttribute="centerY" secondItem="WEv-rf-MEg" secondAttribute="centerY" constant="22" id="Q8w-q9-HLN"/>
                             <constraint firstItem="MXr-AJ-zKA" firstAttribute="centerX" secondItem="WEv-rf-MEg" secondAttribute="centerX" id="RYA-Xg-saR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eXJ-Y0-UnO"/>
@@ -46,7 +46,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHz-t5-T2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="286" y="-340"/>
+            <point key="canvasLocation" x="285.60000000000002" y="-340.47976011994007"/>
         </scene>
         <!--주소로 검색-->
         <scene sceneID="8FY-4O-yL1">
@@ -56,8 +56,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소로 검색하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y9-ZJ-j9g">
-                                <rect key="frame" x="133.5" y="31" width="108" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y9-ZJ-j9g">
+                                <rect key="frame" x="187.5" y="41.5" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,8 +70,8 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9ck-05-b73">
-                                <rect key="frame" x="0.0" y="231" width="375" height="387"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="231" width="375" height="436"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RKi-tb-6gp">
                                         <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
@@ -80,6 +80,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.71482461689999999" green="0.79838627579999999" blue="0.90244537589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="rWL-sF-fMl" kind="show" identifier="SegueMaskDetail" id="DcQ-O6-esD"/>
                                         </connections>
@@ -120,14 +121,14 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="9ck-05-b73" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" id="4F3-35-f50"/>
                             <constraint firstItem="5Y9-ZJ-j9g" firstAttribute="centerY" secondItem="Eak-Mx-UQJ" secondAttribute="centerY" constant="-292" id="4aM-tF-bSG"/>
                             <constraint firstItem="9ck-05-b73" firstAttribute="top" secondItem="Pzu-bi-3as" secondAttribute="bottom" constant="8" id="7TJ-hX-2Ru"/>
                             <constraint firstItem="uVg-rN-KNb" firstAttribute="centerY" secondItem="Eak-Mx-UQJ" secondAttribute="centerY" constant="-183.5" id="DA5-5X-hxu"/>
                             <constraint firstItem="Pzu-bi-3as" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" id="EtL-Ib-MDo"/>
-                            <constraint firstItem="9ck-05-b73" firstAttribute="centerY" secondItem="Eak-Mx-UQJ" secondAttribute="centerY" constant="91" id="FXs-ND-A3g"/>
+                            <constraint firstItem="9ck-05-b73" firstAttribute="centerY" secondItem="Eak-Mx-UQJ" secondAttribute="centerY" constant="115.5" id="FXs-ND-A3g"/>
                             <constraint firstItem="x04-sd-LxI" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" constant="-126" id="Fjg-Dc-mXu"/>
                             <constraint firstItem="uVg-rN-KNb" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" constant="13" id="Oj5-5H-bpb"/>
                             <constraint firstItem="5Y9-ZJ-j9g" firstAttribute="centerX" secondItem="Eak-Mx-UQJ" secondAttribute="centerX" id="Pbw-GJ-XRu"/>
@@ -139,7 +140,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="86k-s8-Z0e"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Nbh-zC-a9f">
+                    <navigationItem key="navigationItem" title="주소검색" id="Nbh-zC-a9f">
                         <barButtonItem key="rightBarButtonItem" title="통계" id="gn8-jb-Y8L">
                             <connections>
                                 <segue destination="By8-WC-RH4" kind="show" identifier="SegueShowChart" id="83N-6r-fu1"/>
@@ -199,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="1962" y="-1655"/>
         </scene>
-        <!--Mask Detail Controller-->
+        <!--상세정보-->
         <scene sceneID="iVy-Tm-fEm">
             <objects>
-                <viewController id="rWL-sF-fMl" customClass="MaskDetailController" customModule="Coronask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="상세정보" id="rWL-sF-fMl" customClass="MaskDetailController" customModule="Coronask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rEY-Nt-RpD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -298,10 +299,10 @@
             </objects>
             <point key="canvasLocation" x="1201" y="-1003"/>
         </scene>
-        <!--Hospital Detail Controller-->
+        <!--상세정보-->
         <scene sceneID="7ZK-31-qZF">
             <objects>
-                <viewController id="nt4-hz-heB" customClass="HospitalDetailController" customModule="Coronask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="상세정보" id="nt4-hz-heB" customClass="HospitalDetailController" customModule="Coronask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H5F-EI-Ity">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -397,10 +398,10 @@
             </objects>
             <point key="canvasLocation" x="1898" y="-340"/>
         </scene>
-        <!--Sales Detail Controller-->
+        <!--상세정보-->
         <scene sceneID="siE-3w-ZxU">
             <objects>
-                <viewController id="Wof-KP-tWS" customClass="SalesDetailController" customModule="Coronask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="상세정보" id="Wof-KP-tWS" customClass="SalesDetailController" customModule="Coronask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gZ5-ho-7Rd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -505,10 +506,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVB-oo-qVg">
-                                <rect key="frame" x="137" y="140" width="100" height="100"/>
+                                <rect key="frame" x="138" y="139" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.9111511994" blue="0.26445246459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="주소검색"/>
+                                <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
                                 <connections>
                                     <segue destination="FtE-Ci-iTV" kind="show" id="H3P-pW-Spi"/>
                                 </connections>
@@ -516,8 +516,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mR5-td-vGy">
                                 <rect key="frame" x="137" y="281" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.9111511994" blue="0.26445246459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="주변보기"/>
+                                <state key="normal" backgroundImage="globe" catalog="system"/>
                                 <connections>
                                     <segue destination="gGu-fs-4Nb" kind="show" id="JYb-1k-ogW"/>
                                 </connections>
@@ -525,8 +524,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHg-rv-9Ho">
                                 <rect key="frame" x="137" y="427" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.9111511994" blue="0.26445246459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="추가정보"/>
+                                <state key="normal" backgroundImage="bell" catalog="system"/>
                                 <connections>
                                     <segue destination="Uem-LK-kLA" kind="show" id="Hcg-Jy-zWY"/>
                                 </connections>
@@ -539,8 +537,29 @@
                                     <segue destination="VGu-pH-iRl" kind="show" id="wHk-eW-Ff5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주소검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8P-7x-ie4">
+                                <rect key="frame" x="159" y="240" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.022215662519999999" green="0.52015239000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주변검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2E-13-FBI">
+                                <rect key="frame" x="159" y="389" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.022215662519999999" green="0.52015239000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="추가정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AZ-Ym-IVw">
+                                <rect key="frame" x="158" y="530" width="59" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.022215662519999999" green="0.52015239000000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0Yk-lQ-uD8"/>
                     </view>
                     <navigationItem key="navigationItem" title="CORONASK" id="6kL-Gg-6ae"/>
@@ -706,7 +725,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2oc-Tf-jdJ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="카드뉴스" id="Ith-z5-bKS"/>
+                    <tabBarItem key="tabBarItem" title="카드뉴스" image="lightbulb.fill" catalog="system" id="Ith-z5-bKS"/>
                     <connections>
                         <outlet property="pageControl" destination="83K-N8-yUO" id="TG3-Ym-t9L"/>
                         <outlet property="scrollView" destination="xy5-cW-mN8" id="8Zs-tx-4oM"/>
@@ -826,7 +845,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dsc-Fb-cLp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="선별진료소" id="S1C-nL-RBf"/>
+                    <tabBarItem key="tabBarItem" title="선별진료소" image="flag.fill" catalog="system" id="S1C-nL-RBf"/>
                     <navigationItem key="navigationItem" id="vDp-GF-Qeb"/>
                     <connections>
                         <outlet property="cityTextView" destination="Mt0-ia-0mb" id="Xg1-2B-hu5"/>
@@ -929,7 +948,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WQe-DN-CwT"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="지역화폐" id="dCN-UF-U3I"/>
+                    <tabBarItem key="tabBarItem" title="지역화폐" image="creditcard.fill" catalog="system" id="dCN-UF-U3I"/>
                     <navigationItem key="navigationItem" id="qvh-2b-0Th"/>
                     <connections>
                         <outlet property="cityTextView" destination="zyH-ae-0gF" id="0hd-N2-gBg"/>
@@ -941,4 +960,12 @@
             <point key="canvasLocation" x="1201" y="325"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="creditcard.fill" catalog="system" width="128" height="91"/>
+        <image name="flag.fill" catalog="system" width="128" height="121"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="lightbulb.fill" catalog="system" width="113" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
 </document>

@@ -124,6 +124,7 @@ class SearchController: UIViewController, UITableViewDataSource, UITableViewDele
         }
         cell.textLabel?.text = selected_store.name
         cell.detailTextLabel?.text = ((selected_store.remain_stat) != nil) ? REMAIN_STAT_MAP[selected_store.remain_stat!] : "정보없음"
+
         return cell
     }
     

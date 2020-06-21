@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +14,51 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="11r-ja-Ybw">
+                                <rect key="frame" x="-19.5" y="-114.5" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.71482461689999999" green="0.79838627579999999" blue="0.90244537589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="896" id="0X8-NC-M4i"/>
+                                    <constraint firstAttribute="width" constant="414" id="Z4z-D7-roN"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="vxr-Cg-UhM">
+                                <rect key="frame" x="0.0" y="132" width="375" height="312"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="fyB-Dt-hVh"/>
+                                    <constraint firstAttribute="height" constant="312" id="uAW-JG-P66"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CORONASK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8c-eF-YlA">
+                                <rect key="frame" x="53.5" y="392" width="268" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7Fp-zZ-7iX"/>
+                                    <constraint firstAttribute="width" constant="268" id="iRi-KK-UfV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S8c-eF-YlA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="88.5" id="4oj-hY-UGS"/>
+                            <constraint firstItem="S8c-eF-YlA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KiO-ci-jwe"/>
+                            <constraint firstItem="11r-ja-Ybw" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QdF-J3-Hfh"/>
+                            <constraint firstItem="11r-ja-Ybw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="VDW-ct-2JZ"/>
+                            <constraint firstItem="vxr-Cg-UhM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nZr-FT-DPO"/>
+                            <constraint firstItem="vxr-Cg-UhM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-45.5" id="oQ6-1O-uP7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AppIcon.png" width="768" height="768"/>
+    </resources>
 </document>
