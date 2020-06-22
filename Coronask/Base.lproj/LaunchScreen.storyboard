@@ -15,40 +15,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="11r-ja-Ybw">
-                                <rect key="frame" x="-19.5" y="-114.5" width="414" height="896"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AtT-fh-ce1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CORONASK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meR-oA-Zh4">
+                                        <rect key="frame" x="53.5" y="405" width="268" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="JHV-jl-VcF"/>
+                                            <constraint firstAttribute="width" constant="268" id="erG-mN-SLn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-W4-sHv">
+                                        <rect key="frame" x="0.0" y="145" width="375" height="312"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="312" id="5TY-Bb-OX9"/>
+                                            <constraint firstAttribute="width" constant="375" id="Ck5-Mf-VZE"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.71482461689999999" green="0.79838627579999999" blue="0.90244537589999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="896" id="0X8-NC-M4i"/>
-                                    <constraint firstAttribute="width" constant="414" id="Z4z-D7-roN"/>
+                                    <constraint firstItem="Xb3-W4-sHv" firstAttribute="centerX" secondItem="AtT-fh-ce1" secondAttribute="centerX" id="FII-rb-DSZ"/>
+                                    <constraint firstAttribute="width" constant="375" id="Vl3-KA-PMN"/>
+                                    <constraint firstItem="Xb3-W4-sHv" firstAttribute="centerY" secondItem="AtT-fh-ce1" secondAttribute="centerY" constant="-32.5" id="bNA-ml-e5o"/>
+                                    <constraint firstItem="meR-oA-Zh4" firstAttribute="centerX" secondItem="AtT-fh-ce1" secondAttribute="centerX" id="lX6-ZU-fYP"/>
+                                    <constraint firstAttribute="height" constant="667" id="y6J-GO-SYm"/>
+                                    <constraint firstItem="meR-oA-Zh4" firstAttribute="centerY" secondItem="AtT-fh-ce1" secondAttribute="centerY" constant="101.5" id="yhf-NR-4pB"/>
                                 </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="vxr-Cg-UhM">
-                                <rect key="frame" x="0.0" y="132" width="375" height="312"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="fyB-Dt-hVh"/>
-                                    <constraint firstAttribute="height" constant="312" id="uAW-JG-P66"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CORONASK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8c-eF-YlA">
-                                <rect key="frame" x="53.5" y="392" width="268" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="7Fp-zZ-7iX"/>
-                                    <constraint firstAttribute="width" constant="268" id="iRi-KK-UfV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="S8c-eF-YlA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="88.5" id="4oj-hY-UGS"/>
-                            <constraint firstItem="S8c-eF-YlA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KiO-ci-jwe"/>
-                            <constraint firstItem="11r-ja-Ybw" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QdF-J3-Hfh"/>
-                            <constraint firstItem="11r-ja-Ybw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="VDW-ct-2JZ"/>
-                            <constraint firstItem="vxr-Cg-UhM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nZr-FT-DPO"/>
-                            <constraint firstItem="vxr-Cg-UhM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-45.5" id="oQ6-1O-uP7"/>
+                            <constraint firstItem="AtT-fh-ce1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kDS-Iu-dO6"/>
+                            <constraint firstItem="AtT-fh-ce1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="umb-U6-gdB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
